@@ -1,0 +1,1 @@
+A project designed to assist in totaling hours for processing payroll. No sensitive data is stored.
