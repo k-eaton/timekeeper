@@ -40,9 +40,9 @@ class Calendar < Struct.new(:view, :date, :callback)
 
 	def weeks
 		# first = date.beginning_of_month.beginning_of_week(START_DAY)
-		now = date
-		first = Date.new(now.year, now.month, 1)		
-		last = Date.new(now.year, now.month, -1)
+
+		first = Date.new(date.year, date.month, 1)		
+		last = Date.new(date.year, date.month, -1)
     # last = date.end_of_month.end_of_week(START_DAY)
 		(first..last).to_a.in_groups_of(1)
 	end
