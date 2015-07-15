@@ -22,20 +22,35 @@ class Calendar < Struct.new(:view, :date, :callback)
 	end
 
 	def pay_period1
-		days1.map do |day|
-			content_tag :tr do
-				day.map { |day| day_cell(day) }.join.html_safe
-				# day.map { |day| day_name(day) }.join.html_safe
-			end
-		end.join.html_safe
+		# if date.strftime('%a') == "Sun" || date.strftime('%a') == "Sat"
+			days1.map do |day|
+				content_tag :tr do
+					day.map { |day| day_cell(day) }.join.html_safe
+				end
+			end.join.html_safe
+		# else
+			# days1.map do |day|
+			# 	content_tag :tr do
+			# 		day.map { |day| day_cell(day) }.join.html_safe
+			# 	end
+			# end.join.html_safe
+		# end
 	end
 
 	def pay_period2
-		days2.map do |day|
-			content_tag :tr do
-				day.map { |day| day_cell(day)}.join.html_safe
-			end
-		end.join.html_safe
+		# if date.strftime('%a') == "Sun" || date.strftime('%a') == "Sat"
+			days2.map do |day|
+				content_tag :tr do
+					day.map { |day| day_cell(day)}.join.html_safe
+				end
+			end.join.html_safe
+		# else
+			# days2.map do |day|
+			# 	content_tag :tr do
+			# 		day.map { |day| day_cell(day)}.join.html_safe
+			# 	end
+			# end.join.html_safe
+		# end
 	end
 
 	def day_name(day)

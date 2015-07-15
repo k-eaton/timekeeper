@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Departments
-
+# Department.create(code: "BLANK", name: "-----")
 # Department.create(code: "ADMIN", name: "Administration/Facilities")
 # Department.create(code: "PRE", name: "Preschool")
 # Department.create(code: "PCARE", name: "Preschool Before/Aftercare")
@@ -50,7 +50,7 @@
 
 # PayrollCycle
 
-PayrollCycle.create(year: 2015,
-										cycle_number: 1,
-										start_date: '07/01/2015',
-										end_date: '07/15/2015')
+# PayrollCycle.create(year: 2015,
+# 										cycle_number: 1,
+# 										start_date: '07/01/2015',
+# 										end_date: '07/15/2015')

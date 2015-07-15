@@ -21,9 +21,37 @@
 </div>
 <div class="row">
   <div class="col-md-12">
+  <%= form_for :timesheet do |f| %>
     <%= calendar @date do |date| %>
-      <%= date.day %> 
-      <%= date.strftime('%a') %> 
+      <%= date.day %>  
+      <td> 
+      	<%= date.strftime('%a') %>
+      </td>
+      <td>
+      	<%= f.collection_select(:department_id, Department.all, :code, :name) %>
+      </td>
+      <td>
+		    <%= f.text_field :title %>
+	    </td>
+	    <td>
+      	<%= f.collection_select(:department_id, Department.all, :code, :name) %>
+      </td>
+      <td>
+		    <%= f.text_field :title %>
+	    </td>
+	    <td>
+      	<%= f.collection_select(:department_id, Department.all, :code, :name) %>
+      </td>
+      <td>
+		    <%= f.text_field :title %>
+	    </td>
+	    <td>
+      	<%= f.collection_select(:department_id, Department.all, :code, :name) %>
+      </td>
+      <td>
+		    <%= f.text_field :title %>
+	    </td>
     <% end %>
+  <% end %>
   </div>
 </div>
